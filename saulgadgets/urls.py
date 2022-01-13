@@ -21,5 +21,7 @@ from apps.core import views
 
 urlpatterns = [
     path('', views.frontpage, name = 'frontpage'),
+    path('contact/', views.contactpage, name = 'contactpage'),
+
     path('admin/', admin.site.urls),
 ]
