@@ -22,6 +22,10 @@ from apps.core.views import frontpage, contactpage, aboutpage
 from apps.store.views import product_detail, category_detail
 
 urlpatterns = [
+
+    # Default
+    path('admin/', admin.site.urls),
+
     # App: core
     path('', frontpage, name = 'frontpage'),
     path('contact/', contactpage, name = 'contactpage'),
@@ -33,5 +37,5 @@ urlpatterns = [
     path('<slug:category_slug>/', category_detail, name = 'category_detail'),
 
 
-    path('admin/', admin.site.urls),
+
 ]
