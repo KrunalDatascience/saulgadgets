@@ -19,7 +19,8 @@
         </div>
         <div id="main-navbar" class="navbar-menu">
             <div class="navbar-end">
-                <a href="/contact/" class="nabar-item">Contact</a>
+                {% comment %} <a href="/contact/" class="nabar-item">Contact</a> {% endcomment %}
+                <a href="{% url 'contactpage' %}" class="nabar-item">Contact</a>
             </div>
         </div>
     </nav>
