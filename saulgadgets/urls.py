@@ -19,7 +19,7 @@ from django.urls import path
 
 ### apps urls views
 from apps.core.views import frontpage, contactpage 
-from apps.store.views import product_detail
+from apps.store.views import product_detail, category_detail
 
 urlpatterns = [
     # App: core
@@ -27,7 +27,9 @@ urlpatterns = [
     path('contact/', contactpage, name = 'contactpage'),
 
     #App: Store
-    path('<slug:slug>/', product_detail, name = 'product_detail'),
+    path('<slug:category_slug>/<slug:product_slug>/', product_detail, name = 'product_detail'),
+    path('<slug:category_slug>/', category_detail, name = 'category_detail'),
+
 
     path('admin/', admin.site.urls),
 ]
