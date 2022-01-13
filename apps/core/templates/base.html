@@ -20,7 +20,10 @@
         <div id="main-navbar" class="navbar-menu">
             <div class="navbar-end">
                 {% comment %} <a href="/contact/" class="nabar-item">Contact</a> {% endcomment %}
-                <a href="{% url 'contactpage' %}" class="nabar-item">Contact</a>
+                {% for category in menu_categories %}
+                    <a href="" class="navbar-item">{{ category.title }}</a>
+                {% endfor %}
+                <a href="{% url 'contactpage' %}" class="navbar-item">Contact</a>
             </div>
         </div>
     </nav>
