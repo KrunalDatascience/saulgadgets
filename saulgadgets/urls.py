@@ -20,6 +20,8 @@ from django.urls import path
 ### apps urls views
 from apps.core.views import frontpage, contactpage, aboutpage
 from apps.store.views import product_detail, category_detail
+from apps.cart.views import cart
+
 
 urlpatterns = [
 
@@ -31,6 +33,8 @@ urlpatterns = [
     path('contact/', contactpage, name = 'contactpage'),
     path('about/', aboutpage, name = 'aboutpage'),
 
+    #App: Cart
+    path('cart/', cart, name = 'cart'),
 
     #App: Store
     path('<slug:category_slug>/<slug:product_slug>/', product_detail, name = 'product_detail'),

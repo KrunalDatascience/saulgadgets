@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saul Gadgets</title>
+    <title> {% block title %}{% endblock title %} Saul Gadgets</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
 <body>
@@ -23,6 +23,10 @@
                 {% for category in menu_categories %}
                     <a href="{% url 'category_detail' category.slug %}" class="navbar-item">{{ category.title }}</a>
                 {% endfor %}
+                
+                <div class="navbar-item">
+                    <a href="{% url 'cart' %}" class="button is-primary">Cart</a>
+                </div>
             </div>
         </div>
     </nav>
