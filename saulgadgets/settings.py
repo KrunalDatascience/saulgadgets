@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #customed installed apps
     'apps.core',
     'apps.store',
+    'apps.cart',
 ]
 
 MIDDLEWARE = [
